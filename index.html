@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cricket Score Tracker</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 24px; background: #f3f4f6; }
+    h1 { margin-top: 0; }
+    .container { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+    .card { background: #fff; border-radius: 8px; padding: 16px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); }
+    .score { font-size: 28px; margin: 8px 0 16px; }
+    .controls { display: flex; flex-wrap: wrap; gap: 8px; }
+    button { border: 0; border-radius: 6px; padding: 8px 12px; cursor: pointer; background: #2563eb; color: #fff; }
+    button.secondary { background: #374151; }
+    .summary { margin-top: 16px; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <h1>Cricket Score Tracker</h1>
+
+  <div class="container">
+    <section class="card" data-team="teamA">
+      <h2>Team A</h2>
+      <label>
+        Name:
+        <input type="text" data-role="name" value="Team A" />
+      </label>
+      <div class="score" data-role="score">0/0 (0.0)</div>
+      <div class="controls">
+        <button data-role="add-runs" data-runs="0">0</button>
+        <button data-role="add-runs" data-runs="1">1</button>
+        <button data-role="add-runs" data-runs="2">2</button>
+        <button data-role="add-runs" data-runs="3">3</button>
+        <button data-role="add-runs" data-runs="4">4</button>
+        <button data-role="add-runs" data-runs="6">6</button>
+        <button data-role="wicket" class="secondary">Wicket</button>
+        <button data-role="reset" class="secondary">Reset</button>
+      </div>
+    </section>
+
+    <section class="card" data-team="teamB">
+      <h2>Team B</h2>
+      <label>
+        Name:
+        <input type="text" data-role="name" value="Team B" />
+      </label>
+      <div class="score" data-role="score">0/0 (0.0)</div>
+      <div class="controls">
+        <button data-role="add-runs" data-runs="0">0</button>
+        <button data-role="add-runs" data-runs="1">1</button>
+        <button data-role="add-runs" data-runs="2">2</button>
+        <button data-role="add-runs" data-runs="3">3</button>
+        <button data-role="add-runs" data-runs="4">4</button>
+        <button data-role="add-runs" data-runs="6">6</button>
+        <button data-role="wicket" class="secondary">Wicket</button>
+        <button data-role="reset" class="secondary">Reset</button>
+      </div>
+    </section>
+  </div>
+
+  <div class="summary card" id="match-summary"></div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
