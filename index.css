@@ -1,0 +1,168 @@
+/* ---------- Base ---------- */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Archivo", Arial, sans-serif;
+    background-color: #0f2e1d;
+    background-image:
+        linear-gradient(#173a25 1px, transparent 1px),
+        linear-gradient(90deg, #173a25 1px, transparent 1px);
+    background-size: 40px 40px;
+    color: #ede6d3;
+    padding-bottom: 60px;
+}
+
+/* ---------- Header ---------- */
+
+.page-header {
+    text-align: center;
+    padding: 60px 20px 20px;
+}
+
+.page-header h1 {
+    font-family: "Archivo Black", Arial, sans-serif;
+    font-size: 42px;
+    margin: 0 0 10px;
+    color: #ede6d3;
+    letter-spacing: 0.5px;
+}
+
+.subtitle {
+    margin: 0;
+    color: #a9b9ae;
+    font-size: 16px;
+}
+
+/* ---------- Layout ---------- */
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding-top: 40px;
+}
+
+/* ---------- Scoreboard panel ---------- */
+
+.team {
+    background-color: #17331f;
+    border: 3px solid #2c4f36;
+    padding: 30px;
+    width: 300px;
+    text-align: center;
+    border-radius: 4px;
+    box-shadow: 0 0 0 6px #0f2e1d inset;
+}
+
+h3 {
+    font-size: 22px;
+    margin-top: 0;
+    letter-spacing: 3px;
+    color: #d9a441;
+    font-weight: 700;
+}
+
+h4 {
+    font-family: "Archivo Black", Arial, sans-serif;
+    font-size: 56px;
+    margin: 20px 0 6px;
+    color: #ede6d3;
+    letter-spacing: 1px;
+}
+
+.team::after {
+    content: "runs / wickets";
+    display: block;
+    font-size: 12px;
+    color: #7c8f80;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+/* ---------- Buttons ---------- */
+
+.btn-row {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+button {
+    flex: 1;
+    padding: 12px 0;
+    font-family: "Archivo", Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 4px;
+    border: none;
+    background-color: #ede6d3;
+    color: #17331f;
+    transition: transform 0.08s ease, background-color 0.15s ease;
+}
+
+button:hover {
+    background-color: #ffffff;
+}
+
+button:active {
+    transform: scale(0.94);
+}
+
+button:focus-visible {
+    outline: 3px solid #d9a441;
+    outline-offset: 2px;
+}
+
+.btn-wicket {
+    background-color: #b3432e;
+    color: #ede6d3;
+}
+
+.btn-wicket:hover {
+    background-color: #c9503a;
+}
+
+.btn-reset {
+    background-color: transparent;
+    color: #a9b9ae;
+    border: 1px solid #3d5a45;
+}
+
+.btn-reset:hover {
+    background-color: #1f4028;
+    color: #ede6d3;
+}
+
+/* ---------- Footer ---------- */
+
+.page-footer {
+    text-align: center;
+    margin-top: 50px;
+    color: #5f7568;
+    font-size: 13px;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 700px) {
+    .container {
+        gap: 24px;
+    }
+
+    .team {
+        width: 88%;
+        max-width: 340px;
+    }
+
+    .page-header h1 {
+        font-size: 30px;
+    }
+}
